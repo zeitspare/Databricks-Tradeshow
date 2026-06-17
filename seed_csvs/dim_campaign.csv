@@ -1,0 +1,26 @@
+campaign_key,campaign_name,campaign_type,channel,market,start_date,end_date
+CP001,High-Intent Follow-Up 1,webinar,web,Media,2026-03-22,2028-11-05
+CP002,New Market Outreach 2,email,web,Media,2028-08-16,2028-10-27
+CP003,Dormant Lead Reactivation 3,direct_mail,onsite,Food & Beverage,2027-05-21,2028-07-02
+CP004,Early Bird Drive 4,retargeting,partner,Food & Beverage,2026-06-08,2028-02-08
+CP005,International Outreach 5,webinar,social,Media,2027-04-28,2028-03-01
+CP006,Post-Event Follow-Up 6,direct_mail,web,Media,2027-12-19,2028-04-14
+CP007,Lead Recovery Program 7,onsite,sales,Technology,2026-01-04,2028-09-29
+CP008,Partner Spotlight 8,direct_mail,web,Media,2027-04-28,2028-08-27
+CP009,Show Interest Reminder 9,onsite,social,Media,2027-01-04,2028-07-07
+CP010,Lead Nurture Series 10,onsite,sales,Technology,2026-10-11,2028-01-19
+CP011,Reactivation Wave 11,webinar,social,Food & Beverage,2027-04-11,2028-01-13
+CP012,New Market Outreach 12,paid_social,email,Food & Beverage,2028-02-23,2028-10-21
+CP013,Cross-Sell Campaign 13,paid_social,social,Media,2026-05-18,2028-04-07
+CP014,Visitor Conversion Push 14,paid_social,web,Technology,2026-07-07,2028-10-31
+CP015,Reactivation Wave 15,retargeting,onsite,Media,2027-08-19,2028-10-03
+CP016,Post-Event Follow-Up 16,onsite,email,Healthcare,2028-06-04,2028-04-11
+CP017,Partner Spotlight 17,webinar,social,Food & Beverage,2026-02-06,2028-10-30
+CP018,Booth Interest Booster 18,direct_mail,web,Retail,2027-09-30,2028-12-20
+CP019,Reactivation Wave 19,email,web,Retail,2027-12-30,2028-07-14
+CP020,Industry Segment Campaign 20,onsite,email,Healthcare,2028-06-03,2028-09-11
+CP021,Sales Handoff Nurture 21,paid_social,email,Food & Beverage,2028-05-07,2028-12-27
+CP022,Lead Nurture Series 22,direct_mail,social,Technology,2027-09-10,2028-06-15
+CP023,Content Download Nurture 23,direct_mail,email,Technology,2026-10-05,2028-04-18
+CP024,Market Expansion Push 24,webinar,social,Technology,2027-09-25,2028-09-18
+CP025,New Market Outreach 25,direct_mail,partner,Healthcare,2028-07-04,2028-11-09

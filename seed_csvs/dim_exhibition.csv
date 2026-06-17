@@ -1,0 +1,6 @@
+exhibition_key,exhibition_name,edition_year,market,location,start_date,end_date,theme,status
+EXH001,ANUGA,2028,Food & Beverage,Cologne,2028-10-07,2028-10-11,Future Food,planned
+EXH002,gamescom,2028,Technology,Cologne,2028-08-23,2028-08-27,Interactive Entertainment,planned
+EXH003,IDS,2028,Healthcare,Cologne,2028-03-14,2028-03-18,Dental Innovation,planned
+EXH004,dmexco,2028,Media,Cologne,2028-09-20,2028-09-21,Digital Marketing,planned
+EXH005,imm cologne,2028,Retail,Cologne,2028-01-18,2028-01-23,Interior Design,planned

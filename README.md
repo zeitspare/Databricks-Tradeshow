@@ -125,7 +125,7 @@
   | company_key          |    | website                |    | end_date             |    | end_date             |   +----------------------+
   | country              |    | parent_company_key     |    | theme                |    |                      |     |
   |                      |    | is_exhibitor           |    | status               |    |                      |     |  
-  | language             |    | is_potential_exhibito  |    |                      |    |                      |     |                             
+  | language             |    | is_potential_exhibitor |    |                      |    |                      |     |                             
   | persona_type         |    |                        |    |                      |    +----------------------+     |          
   | opt_in_status        |    |                        |    |                      |               |                 |    
   | created_ts           |    |                        |    +----------------------+               |                 |     +----------------------+

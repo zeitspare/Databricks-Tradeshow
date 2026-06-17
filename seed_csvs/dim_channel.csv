@@ -1,0 +1,7 @@
+channel_key,channel_name,channel_group
+CH001,web,digital
+CH002,email,digital
+CH003,social,digital
+CH004,sales,human
+CH005,onsite,physical
+CH006,partner,partner
