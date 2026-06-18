@@ -1,6 +1,14 @@
 ## High Level Architecture
 
+### Near Real Time prototype
 ```plaintext
+
+Stream Generator         Event Storage           Processing               Reporting
+┌───────────────┐      ┌───────────────┐      ┌───────────────┐       ┌───────────────┐
+|  Free Edition |      |     Azure     |      |    Azure      |       |   Power       |
+|   Databricks  | ──▶  |   Data LAke   |  ──▶ |  Databricks   | ──▶   |     BI        |
+|               |      |               |      |  Lakehouse    |       |               |
+└───────────────┘      └───────────────┘      └───────────────┘       └───────────────┘
 
 ```
 
@@ -65,20 +73,20 @@
                            |                                |                            |                               |
                            |                                |                            |                               |
                            |─────────────────────────────────────────────────────────────────────────────────────────────|
-                                             |                                                 |                         |
-                                             |                                                 |                         |
-                                             |                                   +----------------------+       +----------------------+
-                                             |                                   | raw_crm_contract_    |       |  raw_sales_activity_ |
-                                             |                                   | events               |       |  events              |
-                                             |                                   |----------------------|       |----------------------|
-                                             |                                   | event_id             |       | event_id             |
-                                             |                                   | event_ts             |       | event_ts             |
-                                             |                                   | contact_id           |       | activity_type        |
-                               ┌────────────────────────┐                        | account_id           |       | contact_id           |
-                               |        Stream          |                        | lifecycle_stage      |       | account_id           |
-                               |      Processing        |                        | lead_status          |       | sales_rep_id         |
-                               |        Engine          |                        | owner_user_id        |       | next_step            |
-                               └────────────────────────┘                        | last_activity_ts     |       | outcome              |
+                                            |                 |                                |                         |
+                                            |                 |                                |                         |
+                                            |                 |                  +----------------------+       +----------------------+
+                                            |                 |                  | raw_crm_contract_    |       |  raw_sales_activity_ |
+                                            |                 |                  | events               |       |  events              |
+                                            |                 |                  |----------------------|       |----------------------|
+                                            |                 |                  | event_id             |       | event_id             |
+                                            |                 |                  | event_ts             |       | event_ts             |
+                                            |                 |                  | contact_id           |       | activity_type        |
+                                            |       ┌────────────────────────┐   | account_id           |       | contact_id           |
+                                            |       |        Stream          |   | lifecycle_stage      |       | account_id           |
+                                            |       |      Processing        |   | lead_status          |       | sales_rep_id         |
+                                            |       |        Engine          |   | owner_user_id        |       | next_step            |
+                                            |       └────────────────────────┘   | last_activity_ts     |       | outcome              |
                                             |                                    | source_system        |       | due_date             |
                                             |                                    | change_type          |       |                      |
                                             |                                    |                      |       |                      |
