@@ -6,7 +6,11 @@ from argparse import ArgumentParser
 from datetime import datetime, timedelta
 from pathlib import Path
 
-SEED_DIR = Path("./seed_csvs/")
+
+BASE_DIR = Path.cwd().parent
+
+SEED_DIR = BASE_DIR / "seed_csvs"
+OUT_DIR = BASE_DIR / "event_jsons" / "raw_event_interaction_eventss"
 
 
 def load_csv(path):
@@ -79,17 +83,19 @@ def build_rows(n, contacts, exhibitions):
 def main():
     parser = ArgumentParser()
     parser.add_argument("--rows", type=int, default=700)
-    parser.add_argument("--output", type=str, default="raw_event_interaction_events.json")
-    args = parser.parse_args()
+    args = parser.parse_known_args()[0]
 
     contacts = load_csv(SEED_DIR / "dim_contact.csv")
     exhibitions = load_csv(SEED_DIR / "dim_exhibition.csv")
 
     rows = build_rows(args.rows, contacts, exhibitions)
 
-    write_json(Path(args.output), rows)
+    file_ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    output_file = OUT_DIR / f"raw_event_interaction_events_{file_ts}.json"
 
-    print(f"\nSaved {len(rows)} events to {Path(args.output).resolve()}")
+    write_json(output_file, rows)
+
+    print(f"\nSaved {len(rows)} events to {output_file.resolve()}")
 
 
 if __name__ == "__main__":
