@@ -15,7 +15,7 @@ OUT_DIR = BASE_DIR / "event_jsons" / "raw_crm_contact_events"
 
 # Azure Event Hubs settings
 EVENT_HUB_CONNECTION_STR = ""
-EVENT_HUB_NAME = ""
+EVENT_HUB_NAME = "crm-contact-eventhub"
 
 
 def load_csv(path):
