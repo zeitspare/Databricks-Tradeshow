@@ -14,8 +14,8 @@ SEED_DIR = BASE_DIR / "seed_csvs"
 OUT_DIR = BASE_DIR / "event_jsons" / "raw_crm_contact_events"
 
 # Azure Event Hubs settings
-EVENT_HUB_CONNECTION_STR = "YOUR_EVENT_HUB_CONNECTION_STRING"
-EVENT_HUB_NAME = "YOUR_EVENT_HUB_NAME"
+EVENT_HUB_CONNECTION_STR = ""
+EVENT_HUB_NAME = ""
 
 
 def load_csv(path):
