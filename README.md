@@ -3,7 +3,7 @@
 ### Real Time prototype
 ```plaintext
 
-Stream (PRODUCER)                                                        AZURE Event Hub (CONSUMER)
+Stream (PRODUCER)                                                        AZURE Event Hub (Stream processing Engine)
 
                       ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
                       |                                                     Tradeshow Namespace                                                    |
@@ -16,7 +16,7 @@ Stream (PRODUCER)                                                        AZURE E
                                                                              
                               │                   │                   │                   │                   │                   │
                               ▼                   ▼                   ▼                   ▼                   ▼                   ▼ 
-                                                                              AZURE Databricks
+                                                                              AZURE Databricks (consumer)
                             ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐      
                             |                                              Tradeshow Workspace                                        |
                             |     ┌──────────────────────────────────────────────────────────────────────────────────────────┐        |
@@ -39,7 +39,20 @@ Stream (PRODUCER)                                                        AZURE E
                             └─────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 ```
+* Data sources - Streaming data from any source (IOT or stream producers etc)
+* Ingestion - Azure Event Hubs for capturing realtime data.
+* Processing - Azure Databricks for stream processing using structured streaming 
+* Storage - Processed Data stored Azure data lake (Delta format)
+* Visualitation - Databricks notebook reports
 
+* Azure Services 
+    * Databricks Workspace (unity catalog enabled)
+    * Azure Data Lake Storage (Premium)
+    * Azure Event Hub (Basic Tier)
+
+* Azure Databricks Configuration 
+    * Single node compute cluster: 12.2 LTS (includes apache spark 3.3.2, Scala 2.12)
+    * Maven Library Installed on Compute Cluster: com.microsoft.azure:azure-eventhubs-spark_2.12:2.3.22
 ## Sample Raw Data Description
 
 * raw_web_page_view_events - Tracks Website Behaviour
